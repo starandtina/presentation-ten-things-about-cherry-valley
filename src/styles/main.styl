@@ -1,0 +1,165 @@
+@import 'prism/themes/prism-okaidia.css'
+
+h1
+  border: none
+
+h3
+  font-family: futura, helvetica, arial, arial, sans-serif
+  font-style: normal
+
+.scene
+  filter: grayscale(30%)
+  width: 320px
+  height: @width
+  margin: .5em 0
+  background-size: cover
+  background-position: 50% 50%
+  border: 2px solid white
+
+.cherry_valley 
+  width: 480px
+  height: @width
+
+li
+  margin .8em
+
+.bespoke-parent
+  color: #333
+  background: white
+h1
+  border-color: white
+
+.bespoke-slide
+  perspective: 600px
+
+.bespoke-backdrop-active
+  opacity: 1
+
+pre
+  text-align: left
+
+code[class*="language-"],
+pre[class*="language-"]
+  color: #333
+  font-family: monaco, andale mono !important
+  line-height: 150%
+  font-size: 30px
+  text-shadow: none
+
+.token.punctuation
+  color: #333
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable
+  color: #333
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted
+  color: #07F
+
+.token.atrule,
+.token.attr-value
+  color: #00FF51
+
+cascade(index)
+  .5s + (index * .3s)
+
+.cascade
+  & > *
+    transition: all .8s ease
+    transform: translateZ(0)
+    opacity: 1
+    .bespoke-active &,
+    .bespoke-active&
+      transition-delay: cascade(0)
+      &:nth-child(2)
+        transition-delay: cascade(1)
+      &:nth-child(3)
+        transition-delay: cascade(2)
+      &:nth-child(4)
+        transition-delay: cascade(3)
+      &:nth-child(5)
+        transition-delay: cascade(4)
+      &:nth-child(6)
+        transition-delay: cascade(5)
+      &:nth-child(7)
+        transition-delay: cascade(6)
+    .bespoke-after &,
+    .bespoke-after&
+      transform: translateZ(0) translateY(15px)
+      opacity: 0
+      &.avatar
+        transform: translateZ(0) translateY(15px) scale(1.2) rotateX(30deg)
+
+
+iframe.phone
+  background: white
+  border: 20px solid #222
+  border-width: 30px 15px 50px 15px
+  border-radius: 10px
+  width: 240px
+  height: 378px
+  transform: translateZ(0)
+  transition: transform 2s ease
+  transition-delat: 1s
+  .bespoke-after &
+    transform: translateZ(0) translateY(10px) rotateX(15deg)
+
+.orange
+  color: white
+  h1
+    border-color: white
+.backdrop--orange
+  background: #FF7A40
+
+.yellow
+  color: #222
+.backdrop--yellow
+  background: #FFD945
+
+.green
+  color: #222
+  h1
+    border-color: #222
+.backdrop--green
+  background: #00FF81
+
+.blue
+  color: #fff
+.backdrop--blue
+  background: #07F
+
+.red
+  color: white
+  h1
+    border-color: white
+.backdrop--red
+  background: #FF3E1C
+
+.white
+  color: #222
+.backdrop--white
+  background: white
+
+.grey
+  color: #222 !important
+.backdrop--grey
+  background: #ccc
+
+
+.backdrop
+  // &--ganesh
+  //   background-image: url('../images/ganesh.jpg')
+  &--polymer
+    background-color: #ccc
+    background-image: url('../images/polymer.svg')
+    background-size: 70%
+    background-repeat: no-repeat
